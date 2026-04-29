@@ -1,0 +1,52 @@
+@base_url = https://a4a09eb3-5d94-453b-b136-43a96eebb657.modelrun.inference.cloud.ru
+@model_name = model-run-seeq5-alone
+
+### Тест 1: Короткий вопрос (типичный запрос пользователя)
+# @name test_short
+POST {{base_url}}/v1/embeddings
+Content-Type: application/json
+
+{
+  "model": "{{model_name}}",
+  "input": "Как войти в ГАС Управление?"
+}
+
+### Тест 2: Развёрнутый вопрос с контекстом
+# @name test_medium
+POST {{base_url}}/v1/embeddings
+Content-Type: application/json
+
+{
+  "model": "{{model_name}}",
+  "input": "Не могу авторизоваться в системе, пишет неверный пароль. Где его сбросить?"
+}
+
+### Тест 3: Сложный вопрос с несколькими аспектами
+# @name test_long
+POST {{base_url}}/v1/embeddings
+Content-Type: application/json
+
+{
+  "model": "{{model_name}}",
+  "input": "Хочу подключить свой отдел к ГАС. Какие шаги нужно сделать, кто выдаёт доступ и куда обращаться за помощью?"
+}
+
+### Тест 4: Проверка семантики — синонимы
+# @name test_synonyms
+POST {{base_url}}/v1/embeddings
+Content-Type: application/json
+
+{
+  "model": "{{model_name}}",
+  "input": "Где взять логин для входа в личный кабинет?"
+}
+
+### Тест 5: Проверка семантики — далёкий запрос (контрольный)
+# @name test_unrelated
+POST {{base_url}}/v1/embeddings
+Content-Type: application/json
+
+{
+  "model": "{{model_name}}",
+  "input": "Как настроить печать документов на сетевом принтере?"
+}
