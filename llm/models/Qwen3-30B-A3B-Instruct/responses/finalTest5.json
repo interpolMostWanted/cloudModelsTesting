@@ -1,0 +1,51 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 1117
+Connection: close
+X-RateLimit-Limit: 300
+X-RateLimit-Remaining: 299
+X-RateLimit-Reset: 1
+date: Thu, 30 Apr 2026 12:49:12 GMT
+x-request-id: d36268ce-a739-43cb-a6f3-f4b054a92b1b
+Server: Evolution API Gateway
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=31536000
+Referrer-Policy: strict-origin-when-cross-origin
+
+{
+  "id": "chatcmpl-d36268ce-a739-43cb-a6f3-f4b054a92b1b",
+  "object": "chat.completion",
+  "created": 1777553352,
+  "model": "model-run--xmdy-must",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Сейчас курс доллара к рублю составляет **92,45 рубля** (по данным Центрального банка РФ на 30 апреля 2026 года).  \n\nОбратите внимание, что это прогнозный или актуальный на момент публикации курс — на реальном рынке он может незначительно отличаться в зависимости от банка и времени суток.",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [],
+        "reasoning_content": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "prompt_tokens": 84,
+    "total_tokens": 170,
+    "completion_tokens": 86,
+    "prompt_tokens_details": null
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "kv_transfer_params": null
+}

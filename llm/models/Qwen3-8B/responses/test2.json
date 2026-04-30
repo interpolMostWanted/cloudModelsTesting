@@ -1,0 +1,42 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 1971
+Connection: close
+X-RateLimit-Limit: 300
+X-RateLimit-Remaining: 299
+X-RateLimit-Reset: 1
+date: Wed, 29 Apr 2026 22:13:40 GMT
+x-request-id: 7cbbe8f1-e89a-4e3b-abc8-1dfa10e496aa
+Server: Evolution API Gateway
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=31536000
+Referrer-Policy: strict-origin-when-cross-origin
+
+{
+  "id": "chatcmpl-7cbbe8f1-e89a-4e3b-abc8-1dfa10e496aa",
+  "object": "chat.completion",
+  "created": 1777500820,
+  "model": "model-run-ox4wk-help",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "reasoning_content": "\nХорошо, пользователь спрашивает, как сбросить пароль. Нужно дать краткий и понятный ответ. Сначала проверю, какие методы обычно используются для сброса пароля. Обычно это восстановление через email или SMS, а также использование резервного ключа. Важно упомянуть, что конкретные шаги зависят от сервиса или системы. Надо предупредить, что если пользователь не помнит учетную запись, нужно связаться с поддержкой. Следует сохранить ответ коротким, без лишних деталей, но охватить основные варианты. Проверю, нет ли ошибок в информации. Вроде все логично. Теперь оформлю ответ кратко и понятно.\n",
+        "content": "\n\nЧтобы сбросить пароль:  \n1. Войдите в аккаунт через раздел \"Восстановление пароля\".  \n2. Введите email или номер телефона, привязанный к аккаунту.  \n3. Следуйте инструкциям (проверка кода, новый пароль).  \nЕсли не помните учетную запись — обратитесь в поддержку.",
+        "tool_calls": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 34,
+    "total_tokens": 321,
+    "completion_tokens": 287,
+    "prompt_tokens_details": null
+  },
+  "prompt_logprobs": null
+}

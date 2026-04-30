@@ -1,0 +1,51 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 1586
+Connection: close
+X-RateLimit-Limit: 300
+X-RateLimit-Remaining: 299
+X-RateLimit-Reset: 1
+date: Wed, 29 Apr 2026 22:34:32 GMT
+x-request-id: 413f4b4c-4f99-4054-8f79-44c0fe7baae2
+Server: Evolution API Gateway
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=31536000
+Referrer-Policy: strict-origin-when-cross-origin
+
+{
+  "id": "chatcmpl-413f4b4c-4f99-4054-8f79-44c0fe7baae2",
+  "object": "chat.completion",
+  "created": 1777502073,
+  "model": "model-run-eaxrj-daughter",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "RAGFlow — это платформа для создания и развертывания Retrieval-Augmented Generation (RAG) систем, которые объединяют возможности поиска информации (Retrieval) и генерации текста (Generation). Основная идея заключается в том, чтобы сначала найти релевантные документы или фрагменты текста на основе запроса пользователя, а затем использовать эти данные для более точной и информативной генерации ответа. Это позволяет создавать более точные и контекстуально релевантные ответы, особенно в задачах, связанных с обработкой больших объемов текстовой информации.",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [],
+        "reasoning_content": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "prompt_tokens": 1002,
+    "total_tokens": 1109,
+    "completion_tokens": 107,
+    "prompt_tokens_details": null
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "kv_transfer_params": null
+}

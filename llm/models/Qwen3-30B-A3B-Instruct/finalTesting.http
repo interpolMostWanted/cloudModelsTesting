@@ -1,0 +1,147 @@
+### ФИНАЛЬНЫЙ БЕНЧМАРК
+
+@base_url = https://5245536e-fb29-4d42-a270-f8f41eb49e45.modelrun.inference.cloud.ru
+@model_name = model-run--xmdy-must
+# @auth_token = Bearer <ЕСЛИ_ТРЕБУЕТСЯ>
+
+### ==========================================
+### ТЕСТ 1: Простой фактологический вопрос
+### Цель: базовая скорость + качество ответа
+### ==========================================
+
+### Простой вопрос
+# @name m1_test1_simple
+POST {{base_url}}/v1/chat/completions
+Content-Type: application/json
+# Authorization: {{auth_token}}
+
+{
+  "model": "{{model_name}}",
+  "messages": [
+    {"role": "user", "content": "Что такое RAGFlow простыми словами?"}
+  ],
+  "temperature": 0.5,
+  "max_tokens": 300
+}
+
+
+### ==========================================
+### ТЕСТ 2: Function Calling (КРИТИЧЕСКИ ВАЖНО!)
+### Цель: вызовет ли модель tool_call для поиска?
+### ==========================================
+
+### Тест 2: Function Calling
+# @name m1_test2_toolcall
+POST {{base_url}}/v1/chat/completions
+Content-Type: application/json
+# Authorization: {{auth_token}}
+
+{
+  "model": "{{model_name}}",
+  "messages": [
+    {"role": "user", "content": "Какой сейчас курс доллара к рублю?"}
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "get_exchange_rate",
+        "description": "Получить текущий курс валюты ЦБ РФ",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "currency": {
+              "type": "string",
+              "description": "Код валюты (USD, EUR)",
+              "enum": ["USD", "EUR"]
+            }
+          },
+          "required": ["currency"]
+        }
+      }
+    }
+  ],
+  "tool_choice": "auto",
+  "temperature": 0
+}
+
+
+### ==========================================
+### ТЕСТ 3: Сложный вопрос с контекстом
+### Цель: качество рассуждений, структура ответа
+### ==========================================
+
+### Тест 3: Сложный вопрос
+# @name m1_test3_complex
+POST {{base_url}}/v1/chat/completions
+Content-Type: application/json
+# Authorization: {{auth_token}}
+
+{
+  "model": "{{model_name}}",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Ты техподдержка ГАС Управление. Отвечай по делу, структурированно, на русском."
+    },
+    {
+      "role": "user",
+      "content": "Мне нужно подключить 5 сотрудников к ГАС. Опиши пошагово: 1) какие документы нужны, 2) куда обращаться, 3) сколько времени занимает, 4) какая стоимость."
+    }
+  ],
+  "temperature": 0.3,
+  "max_tokens": 500
+}
+
+### ==========================================
+### ТЕСТ 4: Русский язык + естественность
+### Цель: качество формулировок, грамотность
+### ==========================================
+
+### Тест 4: Русский язык
+# @name m1_test4_russian
+POST {{base_url}}/v1/chat/completions
+Content-Type: application/json
+# Authorization: {{auth_token}}
+
+{
+  "model": "{{model_name}}",
+  "messages": [
+    {"role": "user", "content": "Объясни разницу между аутентификацией и авторизацией простыми словами, с примерами из жизни."}
+  ],
+  "temperature": 0.6,
+  "max_tokens": 400
+}
+
+
+### тест 5: tool calls
+### Цель: модель видит данные от инструмента и генерирует финальный ответ
+### ==========================================
+POST {{base_url}}/v1/chat/completions
+Content-Type: application/json
+
+{
+  "model": "{{model_name}}",
+  "messages": [
+    {"role": "user", "content": "Какой сейчас курс доллара к рублю?"},
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "id": "call_demo_123",
+          "type": "function",
+          "function": {
+            "name": "get_exchange_rate",
+            "arguments": "{\"currency\": \"USD\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_demo_123",
+      "content": "{\"rate\": 92.45, \"date\": \"2026-04-30\", \"source\": \"ЦБ РФ\"}"
+    }
+  ],
+  "temperature": 0
+}

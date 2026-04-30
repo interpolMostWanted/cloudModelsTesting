@@ -1,0 +1,51 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 2311
+Connection: close
+X-RateLimit-Limit: 300
+X-RateLimit-Remaining: 299
+X-RateLimit-Reset: 1
+date: Thu, 30 Apr 2026 12:37:22 GMT
+x-request-id: 8dd354fe-7d60-452f-91d1-fb65b2690d4b
+Server: Evolution API Gateway
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=31536000
+Referrer-Policy: strict-origin-when-cross-origin
+
+{
+  "id": "chatcmpl-8dd354fe-7d60-452f-91d1-fb65b2690d4b",
+  "object": "chat.completion",
+  "created": 1777552643,
+  "model": "model-run--xmdy-must",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "RAGFlow — это инструмент, который помогает компьютерам лучше понимать и отвечать на вопросы, используя информацию из документов (например, текстов, отчётов, справочников и т.д.).\n\nДавай объясню простыми словами:\n\nПредставь, что у тебя есть куча книг, а ты должен ответить на вопрос, например: *\"Какие были причины Второй мировой войны?\"*  \nЕсли ты просто смотришь в память, может быть, не вспомнишь всё. Но если ты можешь быстро прочитать нужные главы из книг — ответ будет точнее.\n\n**RAGFlow делает то же самое, но для искусственного интеллекта.**\n\nОн работает по принципу **RAG** (Retrieval-Augmented Generation):\n\n1. **Извлечение (Retrieval)** — сначала система ищет в документах нужную информацию.\n2. **Генерация (Generation)** — потом на основе найденной информации генерирует понятный, точный ответ.\n\nА **Flow** — это то, что делает RAGFlow удобным: он упрощает весь процесс — от загрузки документов до получения ответа. Можно загрузить PDF, Word, веб-страницы — и система сама всё об",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [],
+        "reasoning_content": null
+      },
+      "logprobs": null,
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "prompt_tokens": 19,
+    "total_tokens": 319,
+    "completion_tokens": 300,
+    "prompt_tokens_details": null
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "kv_transfer_params": null
+}

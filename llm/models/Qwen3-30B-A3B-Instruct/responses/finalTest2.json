@@ -1,0 +1,60 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 764
+Connection: close
+X-RateLimit-Limit: 300
+X-RateLimit-Remaining: 299
+X-RateLimit-Reset: 1
+date: Thu, 30 Apr 2026 12:37:32 GMT
+x-request-id: 4a05a233-20d8-4a0a-a130-47ab1e1b8b43
+Server: Evolution API Gateway
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=31536000
+Referrer-Policy: strict-origin-when-cross-origin
+
+{
+  "id": "chatcmpl-4a05a233-20d8-4a0a-a130-47ab1e1b8b43",
+  "object": "chat.completion",
+  "created": 1777552653,
+  "model": "model-run--xmdy-must",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "chatcmpl-tool-2842c3daf5fe4cd98e8e21570a735adc",
+            "type": "function",
+            "function": {
+              "name": "get_exchange_rate",
+              "arguments": "{\"currency\": \"USD\"}"
+            }
+          }
+        ],
+        "reasoning_content": null
+      },
+      "logprobs": null,
+      "finish_reason": "tool_calls",
+      "stop_reason": null,
+      "token_ids": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "prompt_tokens": 185,
+    "total_tokens": 206,
+    "completion_tokens": 21,
+    "prompt_tokens_details": null
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "kv_transfer_params": null
+}

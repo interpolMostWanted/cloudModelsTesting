@@ -1,0 +1,51 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 3258
+Connection: close
+X-RateLimit-Limit: 300
+X-RateLimit-Remaining: 299
+X-RateLimit-Reset: 1
+date: Thu, 30 Apr 2026 12:37:52 GMT
+x-request-id: a07defd4-d3b0-4ea7-9140-ab5f5ca4d522
+Server: Evolution API Gateway
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=31536000
+Referrer-Policy: strict-origin-when-cross-origin
+
+{
+  "id": "chatcmpl-a07defd4-d3b0-4ea7-9140-ab5f5ca4d522",
+  "object": "chat.completion",
+  "created": 1777552673,
+  "model": "model-run--xmdy-must",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Вот пошаговая инструкция по подключению 5 сотрудников к ГАС «Управление» (ГАС УП):\n\n---\n\n### **1. Необходимые документы**\n\nДля подключения сотрудников к ГАС «Управление» требуется следующий пакет документов:\n\n#### **Общие документы (на организацию):**\n- Устав организации (с актуальными изменениями);\n- Свидетельство о государственной регистрации (ОГРН);\n- ИНН;\n- КПП (при наличии);\n- Доверенность на представителя организации (если подача документов не от имени руководителя);\n- Решение руководства о подключении к ГАС «Управление» (форма не регламентирована, но рекомендуется — может быть в виде приказа или протокола).\n\n#### **Документы на каждого сотрудника:**\n- Паспорт сотрудника (страницы с данными и пропиской);\n- Документ, подтверждающий полномочия (например, трудовой договор, приказ о назначении);\n- ФИО, должность, подразделение сотрудника;\n- Электронная почта (для регистрации учетной записи);\n- Номер телефона (для двухфакторной аутентификации).\n\n> ⚠️ **Важно:** Все документы должны быть в электронной форме (сканы/фото) в формате PDF или JPG, с четким качеством.\n\n---\n\n### **2. Куда обращаться**\n\nПодключение осуществляется через **Центр информационной поддержки ГАС «Управление»**.\n\n#### **Основные каналы обращения:**\n- **Официальный сайт:** [https://gassu.ru](https://gassu.ru) → раздел «Подключение» / «Для организаций»\n- **Единый контактный центр:** 8 (800) 700-00-00 (бесплатно по России)\n- **Электронная почта:** podkluchenie@gassu.ru (рекомендуется для писем с прикреплёнными документами)\n- **Л",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [],
+        "reasoning_content": null
+      },
+      "logprobs": null,
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "prompt_tokens": 101,
+    "total_tokens": 601,
+    "completion_tokens": 500,
+    "prompt_tokens_details": null
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "kv_transfer_params": null
+}

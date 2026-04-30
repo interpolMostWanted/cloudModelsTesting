@@ -1,0 +1,55 @@
+@base_url = https://13a1c5fc-5f1d-4865-9def-45370e1c6598.modelrun.inference.cloud.ru
+@model_name = model-run-owpcv-giving
+
+### Тест 1: Базовая генерация
+POST {{base_url}}/v1/chat/completions
+Content-Type: application/json
+
+{
+  "model": "{{model_name}}",
+  "messages": [{"role": "user", "content": "Кратко объясни, что такое RAGFlow."}],
+  "temperature": 0.5,
+  "max_tokens": 500
+}
+
+### Тест 2: Следование инструкции
+POST {{base_url}}/v1/chat/completions
+Content-Type: application/json
+
+{
+  "model": "{{model_name}}",
+  "messages": [
+    {"role": "system", "content": "Ты техподдержка. Отвечай кратко."},
+    {"role": "user", "content": "Как сбросить пароль?"}
+  ],
+  "temperature": 0.3,
+  "max_tokens": 500
+}
+
+### Тест 3 (вариант 2): Без tool_choice
+POST {{base_url}}/v1/chat/completions
+Content-Type: application/json
+
+{
+  "model": "{{model_name}}",
+  "messages": [
+    {"role": "user", "content": "Какой сейчас курс доллара к рублю?"}
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "get_exchange_rate",
+        "description": "Получить текущий курс валюты ЦБ РФ",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "currency": {"type": "string", "enum": ["USD", "EUR"]}
+          },
+          "required": ["currency"]
+        }
+      }
+    }
+  ],
+  "temperature": 0
+}

@@ -1,0 +1,42 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 2226
+Connection: close
+X-RateLimit-Limit: 300
+X-RateLimit-Remaining: 299
+X-RateLimit-Reset: 1
+date: Thu, 30 Apr 2026 12:31:49 GMT
+x-request-id: e6ea6361-3966-48a3-94f4-3c864b253c2c
+Server: Evolution API Gateway
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=31536000
+Referrer-Policy: strict-origin-when-cross-origin
+
+{
+  "id": "chatcmpl-e6ea6361-3966-48a3-94f4-3c864b253c2c",
+  "object": "chat.completion",
+  "created": 1777552309,
+  "model": "model-run-ox4wk-help",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "reasoning_content": "\nХорошо, пользователь спрашивает, что такое RAGFlow простыми словами. Начну с того, что RAGFlow — это инструмент, связанный с RAG (Retrieval-Augmented Generation), который помогает создавать ответы на вопросы, используя информацию из внешних источников. Нужно объяснить это без технических терминов.\n\nСначала стоит определить, что такое RAG. Это метод, который сочетает в себе поиск информации и генерацию текста. Теперь RAGFlow, вероятно, это платформа или инструмент, который упрощает использование RAG. Надо подумать, как это работает на практике. Например, пользователь задает вопрос, система ищет информацию в базе данных, а затем генерирует ответ на основе найденных данных.\n\nВажно упомянуть, что RAGFlow позволяет интегрировать внешние данные, что делает ответы более точными и актуальными. Также стоит отметить, что он может использоваться в разных сферах, например, в бизнесе или образовании. Нужно избегать сложных терминов, использовать аналогии, чтобы было понятнее.\n\nПроверю, нет ли ошибок в понимании. RAG",
+        "content": null,
+        "tool_calls": []
+      },
+      "logprobs": null,
+      "finish_reason": "length",
+      "stop_reason": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 19,
+    "total_tokens": 319,
+    "completion_tokens": 300,
+    "prompt_tokens_details": null
+  },
+  "prompt_logprobs": null
+}

@@ -1,0 +1,42 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 1470
+Connection: close
+X-RateLimit-Limit: 300
+X-RateLimit-Remaining: 299
+X-RateLimit-Reset: 1
+date: Thu, 30 Apr 2026 12:54:03 GMT
+x-request-id: 4eccb47c-9e96-46b0-8cc2-21d4d719bb37
+Server: Evolution API Gateway
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=31536000
+Referrer-Policy: strict-origin-when-cross-origin
+
+{
+  "id": "chatcmpl-4eccb47c-9e96-46b0-8cc2-21d4d719bb37",
+  "object": "chat.completion",
+  "created": 1777553644,
+  "model": "model-run-ox4wk-help",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "reasoning_content": "\nХорошо, пользователь спросил о курсе доллара к рублю. Я вызвал функцию get_exchange_rate с параметром USD. Получил ответ: курс 92.45, дата 2026-04-30, источник ЦБ РФ. Теперь нужно оформить ответ. Сначала упомянуть текущий курс, указать дату и источник. Важно быть точным и предоставить информацию в понятной форме. Проверю, нет ли ошибок в данных. Всё выглядит корректно. Теперь сформулирую ответ на русском языке, используя полученные данные.\n",
+        "content": "\n\nТекущий курс доллара к рублю на 30 апреля 2026 года составляет **92,45 рубля за 1 доллар**. Данные предоставлены Центральным банком Российской Федерации.",
+        "tool_calls": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 84,
+    "total_tokens": 287,
+    "completion_tokens": 203,
+    "prompt_tokens_details": null
+  },
+  "prompt_logprobs": null
+}

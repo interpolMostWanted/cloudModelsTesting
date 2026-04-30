@@ -1,0 +1,51 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 2536
+Connection: close
+X-RateLimit-Limit: 300
+X-RateLimit-Remaining: 299
+X-RateLimit-Reset: 1
+date: Thu, 30 Apr 2026 12:38:06 GMT
+x-request-id: 2194d71b-cef9-444e-bbfa-4c5eaabc1b1a
+Server: Evolution API Gateway
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=31536000
+Referrer-Policy: strict-origin-when-cross-origin
+
+{
+  "id": "chatcmpl-2194d71b-cef9-444e-bbfa-4c5eaabc1b1a",
+  "object": "chat.completion",
+  "created": 1777552687,
+  "model": "model-run--xmdy-must",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Конечно! Давай разберём разницу между **аутентификацией** и **авторизацией** простыми словами — как будто объясняем другу за чашкой чая.\n\n---\n\n### 🔐 **Аутентификация** — это **доказательство своей личности**.\n\n> **Что это значит?**  \n> Ты говоришь: *\"Я — это я!\"*  \n> И доказываешь это.\n\n#### Пример из жизни:\nПредставь, что ты приходишь в офис. Ты подходишь к двери с пропуском.  \nТы показываешь свой пропуск охраннику.  \nОн проверяет, что это твой пропуск (по фото, по номеру и т.д.).  \n**Это и есть аутентификация.**\n\n👉 Ты доказал, что ты действительно сотрудник.\n\n---\n\n### 📋 **Авторизация** — это **разрешение на доступ к чему-то**.\n\n> **Что это значит?**  \n> Ты уже доказал, что ты — ты.  \n> Теперь тебе говорят: *\"Ты можешь войти в кабинет, но не в серверную.\"*\n\n#### Пример из жизни:\nТы прошёл через охрану (аутентификация), и теперь тебе говорят:  \n*\"Ты можешь зайти в офис, но не в комнату с секретными документами.\"*  \nИли: *\"Ты можешь пользоваться кухней, но не баром.\"*\n\n👉 Это и есть **авторизация** — тебе дают **права** на определённые действия.\n\n---\n\n### 🔄 Кратко и по-человечески:\n\n| Что? |",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [],
+        "reasoning_content": null
+      },
+      "logprobs": null,
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "prompt_tokens": 37,
+    "total_tokens": 437,
+    "completion_tokens": 400,
+    "prompt_tokens_details": null
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "kv_transfer_params": null
+}

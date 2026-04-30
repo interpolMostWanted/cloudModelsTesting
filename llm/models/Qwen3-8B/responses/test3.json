@@ -1,0 +1,51 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 1054
+Connection: close
+X-RateLimit-Limit: 300
+X-RateLimit-Remaining: 299
+X-RateLimit-Reset: 1
+date: Wed, 29 Apr 2026 22:14:03 GMT
+x-request-id: ef850048-8a0c-49d5-a043-3567fc378ab8
+Server: Evolution API Gateway
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=31536000
+Referrer-Policy: strict-origin-when-cross-origin
+
+{
+  "id": "chatcmpl-ef850048-8a0c-49d5-a043-3567fc378ab8",
+  "object": "chat.completion",
+  "created": 1777500844,
+  "model": "model-run-ox4wk-help",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "reasoning_content": "\nOkay, the user is asking for the current exchange rate of the dollar. Let me check what tools I have available. There's a function called get_exchange_rate that takes a currency parameter. Since they mentioned \"dollar,\" I need to specify which currency code to use. Typically, the dollar is represented as USD. So I should call get_exchange_rate with the currency set to USD. I'll make sure the parameters are correctly formatted in JSON within the tool_call tags.\n",
+        "content": "\n\n",
+        "tool_calls": [
+          {
+            "id": "chatcmpl-tool-33b7884282d4473cbef8ac98b11c162a",
+            "type": "function",
+            "function": {
+              "name": "get_exchange_rate",
+              "arguments": "{\"currency\": \"USD\"}"
+            }
+          }
+        ]
+      },
+      "logprobs": null,
+      "finish_reason": "tool_calls",
+      "stop_reason": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 155,
+    "total_tokens": 275,
+    "completion_tokens": 120,
+    "prompt_tokens_details": null
+  },
+  "prompt_logprobs": null
+}

@@ -1,0 +1,22 @@
+HTTP/1.1 400 Bad Request
+Content-Type: application/json
+Content-Length: 168
+Connection: close
+X-RateLimit-Limit: 300
+X-RateLimit-Remaining: 299
+X-RateLimit-Reset: 1
+date: Wed, 29 Apr 2026 22:49:52 GMT
+x-request-id: 10a5d0bb-1c03-488f-a921-2baa99fd9e3d
+Server: Evolution API Gateway
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=31536000
+Referrer-Policy: strict-origin-when-cross-origin
+
+{
+  "object": "error",
+  "message": "\"auto\" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set",
+  "type": "BadRequestError",
+  "param": null,
+  "code": 400
+}

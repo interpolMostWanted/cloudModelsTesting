@@ -1,0 +1,42 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 1408
+Connection: close
+X-RateLimit-Limit: 300
+X-RateLimit-Remaining: 299
+X-RateLimit-Reset: 1
+date: Wed, 29 Apr 2026 22:49:21 GMT
+x-request-id: 6f4cf27d-87ac-4036-afce-16c892650f4b
+Server: Evolution API Gateway
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=31536000
+Referrer-Policy: strict-origin-when-cross-origin
+
+{
+  "id": "chatcmpl-6f4cf27d-87ac-4036-afce-16c892650f4b",
+  "object": "chat.completion",
+  "created": 1777502962,
+  "model": "model-run-owpcv-giving",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "reasoning_content": null,
+        "content": "Для сброса пароля обычно требуется выполнить следующие шаги:\n1. Перейдите на страницу входа в систему (например, сайт или приложение).\n2. Найдите ссылку \"Забыли пароль?\" или аналогичную.\n3. Введите адрес электронной почты/номер телефона, связанный с аккаунтом.\n4. Следуйте инструкциям для подтверждения личности (обычно это отправка кода по SMS или email).\n5. После подтверждения введите новый пароль дважды и сохраните изменения.\n\nЕсли у вас возникли сложности, обратитесь к инструкции по сбросу пароля от конкретного сервиса или приложения.",
+        "tool_calls": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 30,
+    "total_tokens": 139,
+    "completion_tokens": 109,
+    "prompt_tokens_details": null
+  },
+  "prompt_logprobs": null
+}

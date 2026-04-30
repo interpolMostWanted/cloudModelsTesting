@@ -1,0 +1,51 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 2490
+Connection: close
+X-RateLimit-Limit: 300
+X-RateLimit-Remaining: 299
+X-RateLimit-Reset: 1
+date: Wed, 29 Apr 2026 23:09:23 GMT
+x-request-id: b5a41ec3-12e0-49f1-aeaa-2209c2a9b073
+Server: Evolution API Gateway
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=31536000
+Referrer-Policy: strict-origin-when-cross-origin
+
+{
+  "id": "chatcmpl-b5a41ec3-12e0-49f1-aeaa-2209c2a9b073",
+  "object": "chat.completion",
+  "created": 1777504163,
+  "model": "model-run-serlq-lack",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "RAGFlow - это инструмент с открытым исходным кодом, который **упрощает создание и отладку систем Retrieval-Augmented Generation (RAG)**. \n\n**Простыми словами:**\n\nRAG - это способ улучшить ответы больших языковых моделей (LLM), таких как ChatGPT, путем предоставления им дополнительной информации из внешних источников (например, вашей базы знаний).\n\n**RAGFlow позволяет:**\n\n* **Визуализировать весь процесс RAG:**  Вы видите, как запрос пользователя обрабатывается, какие документы извлекаются, как они используются для генерации ответа и т.д.\n* **Отлаживать каждый этап RAG:**  Вы можете проверить, правильно ли работает поиск, извлекаются ли релевантные документы, и как LLM использует эту информацию.\n* **Экспериментировать с различными компонентами RAG:** Легко менять модели встраивания, векторные базы данных, LLM и другие параметры, чтобы найти оптимальную конфигурацию.\n* **Создавать прототипы RAG систем быстро и эффективно.**\n\nВ общем, RAGFlow - это мощный инструмент для разработчиков, которые хотят создавать более точные, надежные и контекстно-зависимые приложения на основе LLM.\n",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [],
+        "reasoning": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 106,
+      "token_ids": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "prompt_tokens": 21,
+    "total_tokens": 287,
+    "completion_tokens": 266,
+    "prompt_tokens_details": null
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "kv_transfer_params": null
+}

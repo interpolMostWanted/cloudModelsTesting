@@ -1,0 +1,51 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 2377
+Connection: close
+X-RateLimit-Limit: 300
+X-RateLimit-Remaining: 299
+X-RateLimit-Reset: 1
+date: Wed, 29 Apr 2026 23:15:10 GMT
+x-request-id: 827a3009-c7f0-411c-94cc-4f7b25fda93b
+Server: Evolution API Gateway
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=31536000
+Referrer-Policy: strict-origin-when-cross-origin
+
+{
+  "id": "chatcmpl-827a3009-c7f0-411c-94cc-4f7b25fda93b",
+  "object": "chat.completion",
+  "created": 1777504511,
+  "model": "model-run--xmdy-must",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "**RAGFlow** — это открытая платформа для создания и управления системами **RAG (Retrieval-Augmented Generation)**, разработанная компанией **Zilliz**. Она упрощает процесс построения интеллектуальных чат-ботов и систем обработки естественного языка, которые используют внешние данные для генерации более точных и контекстуально обоснованных ответов.\n\nКлючевые особенности RAGFlow:\n- **Автоматическая обработка документов** (PDF, Word, HTML и др.) с извлечением текста и структурированием данных.\n- **Интеграция с векторными базами данных** (например, Milvus) для быстрого поиска похожих фрагментов.\n- **Гибкая архитектура** — позволяет настраивать цепочки обработки (pipelines) под конкретные задачи.\n- **Поддержка нескольких языков** и моделей (включая LLM).\n- **UI-интерфейс** для удобного управления проектами, загрузки данных и тестирования.\n\nПроще говоря, RAGFlow помогает быстро создавать «умных» ассистентов, которые не просто знают ответы из памяти, а могут находить и использовать актуальные данные из документов.",
+        "refusal": null,
+        "annotations": null,
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [],
+        "reasoning_content": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "token_ids": null
+    }
+  ],
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "prompt_tokens": 21,
+    "total_tokens": 335,
+    "completion_tokens": 314,
+    "prompt_tokens_details": null
+  },
+  "prompt_logprobs": null,
+  "prompt_token_ids": null,
+  "kv_transfer_params": null
+}
