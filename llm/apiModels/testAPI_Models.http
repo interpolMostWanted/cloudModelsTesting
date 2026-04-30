@@ -1,0 +1,66 @@
+### ==========================================
+### КОНФИГУРАЦИЯ ДЛЯ CLOUD.RU FOUNDATION MODELS
+### ==========================================
+
+@base_url = https://foundation-models.api.cloud.ru/v1
+@api_key = *
+@model_name = t-tech/T-pro-it-2.0
+
+
+### Тест 1: Вызов инструмента (поиск курса валют)
+# @name test_tool_call
+POST {{base_url}}/chat/completions
+Content-Type: application/json
+Authorization: Bearer {{api_key}}
+
+{
+  "model": "{{model_name}}",
+  "messages": [
+    {"role": "user", "content": "Какой сейчас курс доллара к рублю?"},
+    {
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "id": "call_demo_123",
+          "type": "function",
+          "function": {
+            "name": "get_exchange_rate",
+            "arguments": "{\"currency\": \"USD\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_demo_123",
+      "content": "{\"rate\": 92.45, \"date\": \"2026-04-30\", \"source\": \"ЦБ РФ\"}"
+    }
+  ],
+  "temperature": 0
+}
+
+
+### ==========================================
+### ТЕСТ 2: Сложный запрос с контекстом (Планирование)
+### ==========================================
+
+# @name test_complex_travel
+POST {{base_url}}/chat/completions
+Content-Type: application/json
+Authorization: Bearer {{api_key}}
+
+{
+  "model": "{{model_name}}",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Ты опытный туристический консультант. Отвечай структурированно, по пунктам, давай практические советы."
+    },
+    {
+      "role": "user",
+      "content": "Планирую поездку в Санкт-Петербург на 3 дня вдвоем. Бюджет средний. Составь план: 1) топ-5 мест, которые нельзя пропустить, 2) где вкусно и недорого поесть, 3) как оптимально передвигаться по городу, 4) примерный бюджет на двоих."
+    }
+  ],
+  "max_tokens": 1500,
+  "temperature": 0.3
+}
